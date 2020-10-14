@@ -10,4 +10,10 @@ function oddEven($num){
 
 oddEven(-4);
 
+function square($num){
+  echo $num**2;
+}
+
+square(7);
+
 ?>

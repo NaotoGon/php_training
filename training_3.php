@@ -1,9 +1,11 @@
 <?php
 
 //if
-$score = 70;
+$score = 0;
 if($score > 80){
   echo "合格";
+}elseif($score == 0){
+  echo "keep trying";
 }else{
   echo "不合格";
 }

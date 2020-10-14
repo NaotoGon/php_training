@@ -51,8 +51,12 @@ echo $tax."\n";
 //継承
 Class Present extends Shop{
   //独自メソッド
-  function sayPresent(){
+  public function sayPresent(){
     echo "水とお茶を買うと".$this->name ."をプレゼント";
+  }
+  //オーバーライド
+  public function sayItem(){
+    echo $this->name."は".$this->price * (1 + Shop::$tax)."円です。";
   }
 }
 

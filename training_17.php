@@ -26,4 +26,14 @@ $super = new Super;
 //$super->privateFunc(); エラー
 $super->publicFunc();
 
+//継承クラス
+class Sub extends Super{
+  public function publicFunc(){
+    parent::protectedFunc();
+  }
+}
+
+$sub = new Sub();
+$sub->publicFunc();
+
 ?>

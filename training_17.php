@@ -8,6 +8,8 @@ $array = [
   "key" => "value",
 ];
 
+//----------------------------
+
 //アクセス修飾子
 class Super {
   protected function protectedFunc(){
@@ -35,5 +37,14 @@ class Sub extends Super{
 
 $sub = new Sub();
 $sub->publicFunc();
+
+//-------------------------------------
+//名前空間
+
+require_once "namespace_1.php";
+require_once "namespace_2.php";
+
+//echo sayGreeting();エラー
+echo aaa\sayGreeting();
 
 ?>

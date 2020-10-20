@@ -22,10 +22,10 @@ class Super {
     echo "Public\n";
   }
 
-  function usePrivate(){
+  public function usePrivate(){
     $this->privateFunc();
   }
-  function useProtected(){
+  public function useProtected(){
     $this->protectedFunc();
   }
 }
@@ -43,14 +43,15 @@ class Sub extends Super{
   public function publicFunc(){
     parent::protectedFunc();
   }
-  function foo(){
-    $this->protectedFunc();
-  }
+  // function foo(){
+  //   $this->protectedFunc();
+  // }
 }
 
 $sub = new Sub();
 $sub->publicFunc();
-$sub->foo();
+//$sub->protectedFunc();エラー
+//$sub->foo();
 
 //-------------------------------------
 //名前空間

@@ -13,7 +13,7 @@ $array = [
 //アクセス修飾子
 class Super {
   protected function protectedFunc(){
-    echo "Pretected\n";
+    echo "Protected\n";
   }
   private function privateFunc(){
     echo "Private\n";
@@ -21,22 +21,36 @@ class Super {
   public function publicFunc(){
     echo "Public\n";
   }
+
+  function usePrivate(){
+    $this->privateFunc();
+  }
+  function useProtected(){
+    $this->protectedFunc();
+  }
 }
 
 $super = new Super;
 //$super->protectedFunc(); エラー
 //$super->privateFunc(); エラー
 $super->publicFunc();
+$super->usePrivate();
+$super->useProtected();
+
 
 //継承クラス
 class Sub extends Super{
   public function publicFunc(){
     parent::protectedFunc();
   }
+  function foo(){
+    $this->protectedFunc();
+  }
 }
 
 $sub = new Sub();
 $sub->publicFunc();
+$sub->foo();
 
 //-------------------------------------
 //名前空間

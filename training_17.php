@@ -40,9 +40,9 @@ $super->useProtected();
 
 //継承クラス
 class Sub extends Super{
-  public function publicFunc(){
-    parent::protectedFunc();
-  }
+  // public function publicFunc(){
+  //   parent::protectedFunc();
+  // }
   // function foo(){
   //   $this->protectedFunc();
   // }

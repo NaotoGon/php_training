@@ -2,8 +2,11 @@
 
 namespace aaa;
 
-function sayGreeting(){
-  return "おはよう";
-}
+class Test{
 
+  function sayGreeting(){
+    echo "おはよう\n";
+  }
+
+}
 ?>

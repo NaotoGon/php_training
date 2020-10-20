@@ -59,6 +59,10 @@ require_once "namespace_1.php";
 require_once "namespace_2.php";
 
 //echo sayGreeting();エラー
-echo aaa\sayGreeting();
+$test = new aaa\Test();
+$test->sayGreeting();
+
+$test = new bbb\Test();
+$test->sayGreeting();
 
 ?>
